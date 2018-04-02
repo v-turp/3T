@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="temp_default_height">40dp</dimen>
+    <dimen name="map_height">300dp</dimen>
+    <dimen name="search_button_width">300dp</dimen>
+</resources>

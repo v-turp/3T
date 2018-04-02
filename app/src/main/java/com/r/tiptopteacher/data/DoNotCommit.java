@@ -1,0 +1,10 @@
+package com.r.tiptopteacher.data;
+
+/**
+ * THIS CLASS SHOULD NEVER BE COMMITTED. IT CONTAINS PRIVATE KEYS AND OTHER PRIVATE STUFF
+ * IT IS ONLY USED TO STORE THE PRIVATE STUFF UNTIL THE DATABASE IS CREATED.
+ */
+
+public class DoNotCommit {
+    private final static String GOOGLE_MAPS_API_KEY = "AIzaSyAXiNdLc9x5QjMF9XVlb-n-FGGgNxvkkpw";
+}

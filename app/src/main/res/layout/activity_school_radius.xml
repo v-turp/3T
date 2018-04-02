@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.r.tiptopteacher.presentation.activities.SchoolRadiusActivity">
+
+    <TextView
+        android:id="@+id/tvDistrict"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/temp_default_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/temp_default_height"
+        android:text="@string/district"/>
+
+    <SearchView
+        android:id="@+id/srchDistrict"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/temp_default_height"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvDistrict"/>
+
+    <TextView
+        android:id="@+id/tvSchool"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/temp_default_height"
+        android:layout_alignLeft="@+id/tvDistrict"
+        android:layout_alignStart="@+id/tvDistrict"
+        android:layout_below="@+id/srchDistrict"
+        android:text="@string/school" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSchool"
+        android:layout_centerHorizontal="true"
+        android:text="@string/search" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSearch">
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnSearch" />
+
+
+</RelativeLayout>
