@@ -27,7 +27,7 @@ public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyC
         mapFragment.getMapAsync(this);
 
         //---setup the recyclyerview
-        
+        rv =  findViewById(R.id.rvSchools);
     }
 
 
