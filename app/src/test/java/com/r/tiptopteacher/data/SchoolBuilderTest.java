@@ -2,6 +2,7 @@ package com.r.tiptopteacher.data;
 
 import com.r.tiptopteacher.domain.School;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,5 +27,10 @@ public class SchoolBuilderTest {
     public void builderShouldAddASchoolID(){
         school = new School.Builder().schoolId(5).build();
         assertEquals("School ID is incorrect", 5, school.getSchoolID() );
+    }
+
+    @After
+    public void tearDown(){
+        school = null;
     }
 }
