@@ -1,9 +1,6 @@
-package com.r.tiptopteacher.data;
-
-import com.r.tiptopteacher.domain.School;
+package com.r.tiptopteacher.domain;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
@@ -15,7 +12,7 @@ import static junit.framework.Assert.assertNotNull;
 
 public class SchoolBuilderTest {
 
-    School school;
+    private School school;
 
     @Test
     public void builderShouldBuildASchoolObject(){
