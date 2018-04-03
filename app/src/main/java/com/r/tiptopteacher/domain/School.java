@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class School {
 
-    private int school_Id;
+    private int schoolID;
     private int parentId;
     private String schoolName;
     private String districtName;
@@ -51,7 +51,7 @@ public class School {
     private int districtId;
 
     private School(School.Builder schoolBuilder){
-        this.school_Id = schoolBuilder.schoolId;
+        this.schoolID = schoolBuilder.schoolId;
         this.parentId = schoolBuilder.parentId;
         this.schoolName = schoolBuilder.schoolName;
         this.districtName = schoolBuilder.districtName;
