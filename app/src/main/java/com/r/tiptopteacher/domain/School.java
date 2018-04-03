@@ -62,7 +62,7 @@ public class School {
         this.schoolStatus = schoolBuilder.schoolStatus;
         this.charter = schoolBuilder.charter;
         this.schoolCounty = schoolBuilder.schoolCounty;
-        this.countyId = schoolBuilder.schoolId;
+        this.countyId = schoolBuilder.countyId;
         this.gradeSpan = schoolBuilder.gradeSpan;
         this.totalStudents = schoolBuilder.totalStudents;
         this.classroomTeachers = schoolBuilder.classroomTeachers;
@@ -182,8 +182,8 @@ public class School {
             this.charter = charter;
             return this;
         }
-        public Builder schoolCounty(String schoolName){
-            this.schoolCounty = schoolName;
+        public Builder schoolCounty(String schoolCounty){
+            this.schoolCounty = schoolCounty;
             return this;
         }
         public Builder countyId(int countyId){
