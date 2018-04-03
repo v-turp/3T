@@ -2,6 +2,7 @@ package com.r.tiptopteacher.presentation.activities;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -14,6 +15,7 @@ import com.r.tiptopteacher.R;
 public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private RecyclerView rv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyC
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        //---setup the recyclyerview
+        
     }
 
 
