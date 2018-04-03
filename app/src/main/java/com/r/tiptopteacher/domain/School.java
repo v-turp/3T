@@ -50,6 +50,170 @@ public class School {
     private boolean active;
     private int districtId;
 
+    public int getSchoolID() {
+        return schoolID;
+    }
+
+    public int getParentId() {
+        return parentId;
+    }
+
+    public String getSchoolName() {
+        return schoolName;
+    }
+
+    public String getDistrictName() {
+        return districtName;
+    }
+
+    public String getMailingAddress() {
+        return mailingAddress;
+    }
+
+    public String getPhysicalAddress() {
+        return physicalAddress;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getSchoolType() {
+        return schoolType;
+    }
+
+    public String getSchoolStatus() {
+        return schoolStatus;
+    }
+
+    public String getCharter() {
+        return charter;
+    }
+
+    public String getSchoolCounty() {
+        return schoolCounty;
+    }
+
+    public int getCountyId() {
+        return countyId;
+    }
+
+    public String getGradeSpan() {
+        return gradeSpan;
+    }
+
+    public int getTotalStudents() {
+        return totalStudents;
+    }
+
+    public int getClassroomTeachers() {
+        return classroomTeachers;
+    }
+
+    public double getStudentsPerTeacher() {
+        return studentsPerTeacher;
+    }
+
+    public String getTitle1School() {
+        return title1School;
+    }
+
+    public String getTitle1SchoolWideProgram() {
+        return title1SchoolWideProgram;
+    }
+
+    public String getMagnet() {
+        return magnet;
+    }
+
+    public String getLocale() {
+        return locale;
+    }
+
+    public String getEnrollmentByGrade() {
+        return enrollmentByGrade;
+    }
+
+    public String getEnrollmentByRace() {
+        return enrollmentByRace;
+    }
+
+    public String getEnrollmentByGender() {
+        return enrollmentByGender;
+    }
+
+    public boolean isFreeLunchEligible() {
+        return freeLunchEligible;
+    }
+
+    public boolean isReducedPriceLunchEligible() {
+        return reducedPriceLunchEligible;
+    }
+
+    public boolean isGreatschoolRating() {
+        return greatschoolRating;
+    }
+
+    public double getSchoolLat() {
+        return schoolLat;
+    }
+
+    public double getSchoolLon() {
+        return schoolLon;
+    }
+
+    public String getGeoJson() {
+        return geoJson;
+    }
+
+    public String getGeoSource() {
+        return geoSource;
+    }
+
+    public double getRiskRank() {
+        return riskRank;
+    }
+
+    public String getSchoolZipcode() {
+        return schoolZipcode;
+    }
+
+    public int getZipId() {
+        return zipId;
+    }
+
+    public boolean isPrivateSchool() {
+        return isPrivateSchool;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public int getDistrictId() {
+        return districtId;
+    }
+
     private School(School.Builder schoolBuilder){
         this.schoolID = schoolBuilder.schoolId;
         this.parentId = schoolBuilder.parentId;
