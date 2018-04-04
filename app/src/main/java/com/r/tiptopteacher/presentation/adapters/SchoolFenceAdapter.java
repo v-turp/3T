@@ -53,7 +53,7 @@ public class SchoolFenceAdapter extends RecyclerView.Adapter<SchoolFenceAdapter.
         TextView tvSchoolDistrict = holder.tvSchoolDistrict;
 
         // step 3) add the data the right/respective view
-        tvSchoolId.setText(school.getSchoolID());
+        tvSchoolId.setText(String.valueOf(school.getSchoolID()));
         tvSchoolName.setText(school.getSchoolName());
         tvSchoolType.setText(school.getSchoolType());
         tvSchoolDistrict.setText(school.getDistrictName());
@@ -61,7 +61,7 @@ public class SchoolFenceAdapter extends RecyclerView.Adapter<SchoolFenceAdapter.
 
     @Override
     public int getItemCount() {
-        return 0;
+        return schoolList.size();
     }
 
     public static class SchoolFenceViewHolder extends RecyclerView.ViewHolder{
