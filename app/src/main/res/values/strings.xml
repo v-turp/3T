@@ -9,4 +9,8 @@
     <string name="title_activity_school_fence">School Fence</string>
     <string name="title_activity_test_map">Map</string>
     <string name="title_activity_map_teste">Map</string>
+    <string name="school_id">School ID</string>
+    <string name="school_name">School Name</string>
+    <string name="school_type">School Type</string>
+    <string name="school_district">School District</string>
 </resources>

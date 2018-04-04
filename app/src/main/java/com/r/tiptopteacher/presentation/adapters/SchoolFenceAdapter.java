@@ -43,10 +43,10 @@ public class SchoolFenceAdapter extends RecyclerView.Adapter<SchoolFenceAdapter.
         public SchoolFenceViewHolder(View itemView) {
             super(itemView);
 
-            col1 = (TextView) itemView.findViewById(R.id.tvCol1);
-            col2 = (TextView) itemView.findViewById(R.id.tvCol2);
-            col3 = (TextView) itemView.findViewById(R.id.tvCol3);
-            col4 = (TextView) itemView.findViewById(R.id.tvCol4);
+            col1 = (TextView) itemView.findViewById(R.id.tvSchoolId);
+            col2 = (TextView) itemView.findViewById(R.id.tvSchoolName);
+            col3 = (TextView) itemView.findViewById(R.id.tvSchoolType);
+            col4 = (TextView) itemView.findViewById(R.id.tvSchoolDistrict);
         }
     }
 

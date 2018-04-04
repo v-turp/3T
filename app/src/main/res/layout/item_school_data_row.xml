@@ -2,30 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="4">
 
     <TextView
-        android:id="@+id/tvCol1"
-        android:layout_width="86dp"
-        android:layout_height="match_parent"
-        android:text="Testing" />
-
-    <TextView
-        android:id="@+id/tvCol2"
-        android:layout_width="76dp"
-        android:layout_height="match_parent"
-        android:text="District" />
-
-    <TextView
-        android:id="@+id/tvCol3"
-        android:layout_width="106dp"
-        android:layout_height="match_parent"
-        android:text="Private School" />
-
-    <TextView
-        android:id="@+id/tvCol4"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvSchoolId"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="School Language" />
+        android:text="@string/school_id" />
+
+    <TextView
+        android:id="@+id/tvSchoolName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/school_name" />
+
+    <TextView
+        android:id="@+id/tvSchoolType"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/school_type" />
+
+    <TextView
+        android:id="@+id/tvSchoolDistrict"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/district" />
 </LinearLayout>
