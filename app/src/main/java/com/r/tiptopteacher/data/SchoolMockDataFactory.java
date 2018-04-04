@@ -40,10 +40,32 @@ public class SchoolMockDataFactory {
                 .districtName("Winner District").schoolCounty("Greenfield County").build();
         School school10 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
                 .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school11 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school12 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school13 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school14 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school15 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school16 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school17 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school18 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school19 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
+        School school20 = new School.Builder().schoolId(5).schoolName("Best Elementary").schoolType("Elementary")
+                .districtName("Winner District").schoolCounty("Greenfield County").build();
 
         mockSchoolList.add(school1);mockSchoolList.add(school2);mockSchoolList.add(school3);mockSchoolList.add(school4);
         mockSchoolList.add(school5);mockSchoolList.add(school6);mockSchoolList.add(school7);mockSchoolList.add(school8);
-        mockSchoolList.add(school9);mockSchoolList.add(school10);
+        mockSchoolList.add(school9);mockSchoolList.add(school10);mockSchoolList.add(school11);mockSchoolList.add(school12);
+        mockSchoolList.add(school13);mockSchoolList.add(school14);mockSchoolList.add(school15);mockSchoolList.add(school16);
+        mockSchoolList.add(school7);mockSchoolList.add(school18);mockSchoolList.add(school19);mockSchoolList.add(school20);
 
         return mockSchoolList;
     }
