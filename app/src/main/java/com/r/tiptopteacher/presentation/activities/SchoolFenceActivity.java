@@ -1,7 +1,8 @@
 package com.r.tiptopteacher.presentation.activities;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -11,6 +12,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.r.tiptopteacher.R;
+import com.r.tiptopteacher.data.SchoolMockDataFactory;
+import com.r.tiptopteacher.presentation.adapters.SchoolFenceAdapter;
 
 public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -26,8 +29,14 @@ public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyC
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //---setup the recyclyerview
+        // step 1) ---setup the recyclyerview
         rv =  findViewById(R.id.rvSchools);
+        // step 2) setup the adapter
+        SchoolFenceAdapter schoolFenceAdapter = new SchoolFenceAdapter(SchoolMockDataFactory.getAListOfSchools());
+        // step 3) add the adapter to the recycler view
+        rv.setAdapter(schoolFenceAdapter);
+        // step 4) add the layout manager
+        rv.setLayoutManager(new LinearLayoutManager(this));
     }
 
 
