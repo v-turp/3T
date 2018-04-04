@@ -8,28 +8,28 @@
     <TextView
         android:id="@+id/tvSchoolId"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/default_grid_row_height"
         android:layout_weight="1"
         android:text="@string/school_id" />
 
     <TextView
         android:id="@+id/tvSchoolName"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/default_grid_row_height"
         android:layout_weight="1"
         android:text="@string/school_name" />
 
     <TextView
         android:id="@+id/tvSchoolType"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/default_grid_row_height"
         android:layout_weight="1"
         android:text="@string/school_type" />
 
     <TextView
         android:id="@+id/tvSchoolDistrict"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/default_grid_row_height"
         android:layout_weight="1"
         android:text="@string/district" />
 </LinearLayout>
