@@ -11,7 +11,8 @@
         android:layout_height="@dimen/temp_default_height"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/temp_default_height"
-        android:text="@string/district"/>
+        android:text="@string/district"
+        style="@style/searchPageTextDecor" />
 
     <SearchView
         android:id="@+id/srchDistrict"
@@ -26,7 +27,8 @@
         android:layout_height="@dimen/temp_default_height"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/srchDistrict"
-        android:text="@string/school"/>
+        android:text="@string/school"
+        style="@style/searchPageTextDecor"/>
 
     <SearchView
         android:id="@+id/srchSchool"
