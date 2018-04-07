@@ -2,6 +2,7 @@ package com.r.tiptopteacher.presentation.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +22,7 @@ import java.util.List;
 public class SchoolFenceAdapter extends RecyclerView.Adapter<SchoolFenceAdapter.SchoolFenceViewHolder> {
 
     List<School> schoolList;
-
+    Context context;
     public SchoolFenceAdapter(List<School> schoolList){
         this.schoolList = schoolList;
     }
@@ -30,7 +31,7 @@ public class SchoolFenceAdapter extends RecyclerView.Adapter<SchoolFenceAdapter.
     @Override
     public SchoolFenceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // step 1) get a context from the parent
-        Context context = parent.getContext();
+        context = parent.getContext();
         // step 2) get a layout inflater from the context
         LayoutInflater inflater = LayoutInflater.from(context);
         // step 3) inflate the layout
@@ -57,6 +58,12 @@ public class SchoolFenceAdapter extends RecyclerView.Adapter<SchoolFenceAdapter.
         tvSchoolName.setText(school.getSchoolName());
         tvSchoolType.setText(school.getSchoolType());
         tvSchoolDistrict.setText(school.getDistrictName());
+
+        // set the color of the rows...TODO: technical debt this does not work properly when the views are recycled and scrolling...FIX IT. good only for showing
+        if(position%2 == 0){
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.pinkRowItem));
+        } else
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.purpleRowItem));
     }
 
     @Override

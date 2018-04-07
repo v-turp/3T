@@ -10,6 +10,8 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/default_grid_row_height"
         android:layout_weight="1"
+        android:paddingLeft="@dimen/medium_padding"
+        android:paddingRight="@dimen/medium_padding"
         android:text="@string/school_id" />
 
     <TextView
