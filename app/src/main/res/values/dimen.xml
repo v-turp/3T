@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="smallPadding">5dp</dimen>
+    <dimen name="small_padding">5dp</dimen>
     <dimen name="medium_padding">10dp</dimen>
     <dimen name="large_padding">15dp</dimen>
     <dimen name="temp_default_height">40dp</dimen>
@@ -8,4 +8,5 @@
     <dimen name="search_button_width">300dp</dimen>
     <dimen name="default_grid_row_height">30dp</dimen>
     <dimen name="default_round_corner">10dp</dimen>
+    <dimen name="search_btn_text_size">20sp</dimen>
 </resources>
