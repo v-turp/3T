@@ -15,12 +15,10 @@
 
     <SearchView
         android:id="@+id/srchDistrict"
-        android:layout_width="300dp"
-        android:layout_height="@dimen/temp_default_height"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/search_box_design"
+        android:layout_width="match_parent"
         android:layout_below="@+id/tvDistrict"
-        android:queryHint="@string/search"/>
+        android:queryHint="@string/search"
+        style="@style/searchBoxStyle" />
     <TextView
         android:id="@+id/tvSchool"
         android:layout_width="wrap_content"
@@ -31,12 +29,11 @@
 
     <SearchView
         android:id="@+id/srchSchool"
-        android:layout_width="300dp"
-        android:layout_height="@dimen/temp_default_height"
+        android:layout_width="match_parent"
         android:layout_below="@+id/tvSchool"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/search_box_design"
-        android:queryHint="@string/search" />
+        android:queryHint="@string/search"
+        style="@style/searchBoxStyle"
+        />
 
     <Button
         android:id="@+id/btnSearch"
