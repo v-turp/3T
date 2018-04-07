@@ -18,6 +18,7 @@
         android:layout_width="300dp"
         android:layout_height="@dimen/temp_default_height"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/search_box_design"
         android:layout_below="@+id/tvDistrict"
         android:queryHint="@string/search"/>
     <TextView
@@ -34,6 +35,7 @@
         android:layout_height="@dimen/temp_default_height"
         android:layout_below="@+id/tvSchool"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/search_box_design"
         android:queryHint="@string/search" />
 
     <Button
@@ -42,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/srchSchool"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/holo_green_dark"
+        android:background="@drawable/search_button_design"
         android:text="@string/search"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
