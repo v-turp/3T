@@ -17,6 +17,7 @@
         android:id="@+id/srchDistrict"
         android:layout_width="match_parent"
         android:layout_below="@+id/tvDistrict"
+        android:layout_marginBottom="@dimen/medium_padding"
         android:queryHint="@string/search"
         style="@style/searchBoxStyle" />
     <TextView
@@ -31,6 +32,7 @@
         android:id="@+id/srchSchool"
         android:layout_width="match_parent"
         android:layout_below="@+id/tvSchool"
+        android:layout_marginBottom="@dimen/medium_padding"
         android:queryHint="@string/search"
         style="@style/searchBoxStyle"
         />
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/srchSchool"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/medium_padding"
         android:background="@drawable/search_button_design"
         android:text="@string/search"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
