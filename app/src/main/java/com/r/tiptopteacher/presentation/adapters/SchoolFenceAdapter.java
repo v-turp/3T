@@ -59,7 +59,7 @@ public class SchoolFenceAdapter extends RecyclerView.Adapter<SchoolFenceAdapter.
         tvSchoolType.setText(school.getSchoolType());
         tvSchoolDistrict.setText(school.getDistrictName());
 
-        // set the color of the rows...TODO: technical debt this does not work properly when the views are recycled and scrolling...FIX IT. good only for showing
+        // set the color of the rows
         if(position%2 == 0){
             holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.pinkRowItem));
         } else
