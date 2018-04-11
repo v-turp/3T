@@ -16,13 +16,20 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.r.tiptopteacher.R;
 import com.r.tiptopteacher.data.SchoolMockDataFactory;
+import com.r.tiptopteacher.domain.DaggerDetention;
+import com.r.tiptopteacher.domain.Detention;
 import com.r.tiptopteacher.presentation.adapters.SchoolFenceAdapter;
+
+import javax.inject.Inject;
 
 public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
     private GoogleMap mMap;
     private RecyclerView rv;
     private Button btnSchoolSearch;
+
+    @Inject
+    SchoolMockDataFactory schoolMockDataFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +40,14 @@ public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyC
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        // daggar initializations
+        Detention detention = DaggerDetention.builder().build();
+        schoolMockDataFactory = detention.getSchoolMockDataFactory();
+
         // step 1) ---setup the recyclyerview
         rv =  findViewById(R.id.rvSchools);
         // step 2) setup the adapter
-        SchoolFenceAdapter schoolFenceAdapter = new SchoolFenceAdapter(SchoolMockDataFactory.getAListOfSchools());
+        SchoolFenceAdapter schoolFenceAdapter = new SchoolFenceAdapter(schoolMockDataFactory.getAListOfSchools());
         // step 3) add the adapter to the recycler view
         rv.setAdapter(schoolFenceAdapter);
         // step 4) add the layout manager

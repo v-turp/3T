@@ -5,17 +5,30 @@ import com.r.tiptopteacher.domain.School;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+import dagger.Module;
+import dagger.Provides;
+
 /**
  * Created by Who Dat on 4/2/2018.
  * The purpose of this class is to create mock date
  * for all the necessary com.r.tiptopteacher.domain objects
  */
-
+@Module
 public class SchoolMockDataFactory {
 
+    @Inject
+    public SchoolMockDataFactory(){}
+
+    @Provides
+    public SchoolMockDataFactory getSchoolMockDataFactory(){
+        return new SchoolMockDataFactory();
+    }
 
     //--- a list of 10 schools
-    public static List<School> getAListOfSchools(){
+    @Provides
+    public List<School> getAListOfSchools(){
         List<School> mockSchoolList = new ArrayList<>();
 
         // create a list of schools

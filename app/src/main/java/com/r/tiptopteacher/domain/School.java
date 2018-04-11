@@ -2,10 +2,14 @@ package com.r.tiptopteacher.domain;
 
 import java.util.Date;
 
+import javax.inject.Inject;
+
+import dagger.Module;
+
 /**
  * Created by Who Dat on 4/2/2018.
  */
-
+@Module
 public class School {
 
     private int schoolID;
@@ -49,6 +53,9 @@ public class School {
     private String modifiedBy;
     private boolean active;
     private int districtId;
+
+    @Inject
+    public School(){}
 
     public int getSchoolID() {
         return schoolID;
