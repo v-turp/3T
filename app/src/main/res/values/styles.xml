@@ -12,18 +12,19 @@
         <item name="android:layout_height">@dimen/temp_default_height</item>
         <item name="android:layout_marginRight">@dimen/small_padding</item>
         <item name="android:layout_marginLeft">@dimen/small_padding</item>
+        <item name="android:layout_marginTop">1dp</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:background">@drawable/search_box_design</item>
     </style>
 
     <style name="searchPageTextDecor">
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">21sp</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="rowGridWork">
-        <item name="android:paddingLeft">@dimen/medium_padding</item>
-        <item name="android:paddingRight">@dimen/medium_padding</item>
+        <item name="android:paddingLeft">@dimen/small_padding</item>
+        <item name="android:paddingRight">@dimen/small_padding</item>
         <item name="android:background">@drawable/imitation_grid</item>
     </style>
 

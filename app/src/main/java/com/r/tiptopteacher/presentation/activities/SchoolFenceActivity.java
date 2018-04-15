@@ -22,6 +22,11 @@ import com.r.tiptopteacher.presentation.adapters.SchoolFenceAdapter;
 
 import javax.inject.Inject;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
     private GoogleMap mMap;
@@ -40,20 +45,16 @@ public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyC
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        // daggar initializations
+        // ioc
         Detention detention = DaggerDetention.builder().build();
         schoolMockDataFactory = detention.getSchoolMockDataFactory();
 
-        // step 1) ---setup the recyclyerview
         rv =  findViewById(R.id.rvSchools);
-        // step 2) setup the adapter
         SchoolFenceAdapter schoolFenceAdapter = new SchoolFenceAdapter(schoolMockDataFactory.getAListOfSchools());
-        // step 3) add the adapter to the recycler view
         rv.setAdapter(schoolFenceAdapter);
-        // step 4) add the layout manager
         rv.setLayoutManager(new LinearLayoutManager(this));
 
-        // initialize and add listeners
+        // page view setup
         btnSchoolSearch = (Button) findViewById(R.id.btnSearch);
         btnSchoolSearch.setOnClickListener(this);
     }
@@ -79,9 +80,9 @@ public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyC
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng losAngeles = new LatLng(34.052235, -118.2437);
+        mMap.addMarker(new MarkerOptions().position(losAngeles).title("Marker in Los Angeles"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(losAngeles));
     }
 
     @Override
@@ -96,5 +97,19 @@ public class SchoolFenceActivity extends FragmentActivity implements OnMapReadyC
             default:
                break;
         }
+    }
+
+    private void searchTeachers(){  // TODO NOTE: this is calling the block.io transactions for testing. should convert to teacher search call when mike is ready
+        /*https://www.google.com/maps/embed/v1/MODE?key=<>&parameters*/
+        final String gmak = "AIzaSyAi-n_zreP3-V71dNPl1QEOjMqOeMe1ZBE";
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        Retrofit retrofit = new Retrofit.Builder()
+                                .baseUrl(gmak)
+                                .addConverterFactory(GsonConverterFactory.create())
+                                .build();
+
+
     }
 }

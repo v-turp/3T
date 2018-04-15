@@ -7,28 +7,32 @@
 
     <TextView
         android:id="@+id/tvDistrict"
+        style="@style/searchPageTextDecor"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/temp_default_height"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/temp_default_height"
-        android:text="@string/district"
-        style="@style/searchPageTextDecor" />
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvSchool"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/tvSchool"
+        android:layout_marginTop="@dimen/medium_padding"
+        android:text="@string/district" />
 
     <SearchView
         android:id="@+id/srchDistrict"
         android:layout_width="match_parent"
         android:layout_below="@+id/tvDistrict"
-        android:layout_marginBottom="@dimen/medium_padding"
+        android:layout_marginBottom="@dimen/small_padding"
         android:queryHint="@string/search"
         style="@style/searchBoxStyle" />
+
     <TextView
         android:id="@+id/tvSchool"
+        style="@style/searchPageTextDecor"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/temp_default_height"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDistrict"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/srchDistrict"
-        android:text="@string/school"
-        style="@style/searchPageTextDecor"/>
+        android:layout_marginTop="@dimen/xxxlarge_padding"
+        android:text="@string/school" />
 
     <SearchView
         android:id="@+id/srchSchool"
@@ -42,31 +46,31 @@
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="@dimen/search_button_width"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/search_btn_height"
         android:layout_below="@+id/srchSchool"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/medium_padding"
         android:background="@drawable/search_button_design"
         android:text="@string/search"
-        android:textSize="@dimen/search_btn_text_size"
-        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="@dimen/search_btn_text_size" />
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="@dimen/map_height"
-        android:layout_below="@+id/btnSearch"/>
+        android:layout_below="@+id/btnSearch"
+        android:layout_marginTop="@dimen/small_padding"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvSchools"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/map_height"
+        android:layout_height="@dimen/recycler_view_height_search"
         android:layout_below="@+id/map"
-        android:layout_marginRight="@dimen/large_padding"
-        android:layout_marginEnd="@dimen/large_padding"
-        android:layout_marginLeft="@dimen/large_padding"
-        android:layout_marginStart="@dimen/large_padding"/>
+        android:layout_marginRight="@dimen/small_padding"
+        android:layout_marginEnd="@dimen/small_padding"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginStart="@dimen/small_padding"/>
 
 </RelativeLayout>
 

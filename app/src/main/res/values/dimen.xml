@@ -3,10 +3,15 @@
     <dimen name="small_padding">5dp</dimen>
     <dimen name="medium_padding">10dp</dimen>
     <dimen name="large_padding">15dp</dimen>
-    <dimen name="temp_default_height">40dp</dimen>
-    <dimen name="map_height">300dp</dimen>
-    <dimen name="search_button_width">300dp</dimen>
-    <dimen name="default_grid_row_height">30dp</dimen>
+    <dimen name="xlarge_padding">20dp</dimen>
+    <dimen name="xxlarge_padding">25dp</dimen>
+    <dimen name="xxxlarge_padding">30dp</dimen>
+    <dimen name="temp_default_height">30dp</dimen>
+    <dimen name="map_height">200dp</dimen>
+    <dimen name="search_button_width">220dp</dimen>
+    <dimen name="default_grid_row_height">40dp</dimen>
     <dimen name="default_round_corner">10dp</dimen>
     <dimen name="search_btn_text_size">20sp</dimen>
+    <dimen name="search_btn_height">35dp</dimen>
+    <dimen name="recycler_view_height_search">500dp</dimen>
 </resources>
