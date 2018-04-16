@@ -26,7 +26,7 @@ public class SchoolMockDataFactory {
         return new SchoolMockDataFactory();
     }
 
-    //--- a list of 10 schools
+    //--- a list of 20 schools
     @Provides
     public List<School> getAListOfSchools(){
         List<School> mockSchoolList = new ArrayList<>();
